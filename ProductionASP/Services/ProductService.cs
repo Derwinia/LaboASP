@@ -7,11 +7,14 @@ namespace ProductionASP.Services
     public class ProductService
     {
         private readonly ProductContext _dc;
+        private readonly MailService _mailService;
 
-        public ProductService(ProductContext dc)
+        public ProductService(ProductContext dc, MailService mailService)
         {
             _dc = dc;
+            _mailService = mailService;
         }
+
         public IEnumerable<Product> GetLastProduct()
         {
             return _dc.Products
@@ -45,11 +48,11 @@ namespace ProductionASP.Services
         {
             if(p.Stock*p.Price > 1000)
             {
-                throw new Exception();
+                throw new ProductException("Valeur trop élevé");
             }
             else if (p.Stock * p.Price > 100)
             {
-
+                _mailService.Send("Produit encore disponible", "Un article dont la valeur est de "+p.Price*p.Stock+" euros à été supprimé", "deniscolin777@yahoo.fr");
             }
             p.UpdateDate = DateTime.Now;
             p.IsDeleted = true;
