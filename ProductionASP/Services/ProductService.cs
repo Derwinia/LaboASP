@@ -34,6 +34,7 @@ namespace ProductionASP.Services
             // enregistrer dans la db
             _dc.Products.Add(p);
             _dc.SaveChanges();
+            //defefg
         }
     }
 }
