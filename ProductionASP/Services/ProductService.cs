@@ -52,7 +52,7 @@ namespace ProductionASP.Services
             }
             else if (p.Stock * p.Price > 100)
             {
-                _mailService.Send("Produit encore disponible", "Un article dont la valeur est de "+p.Price*p.Stock+" euros à été supprimé", "deniscolin777@yahoo.fr");
+                _mailService.Send("Produit encore disponible", "Un article dont la valeur est de "+p.Price*p.Stock+" euros à été supprimé");
             }
             p.UpdateDate = DateTime.Now;
             p.IsDeleted = true;

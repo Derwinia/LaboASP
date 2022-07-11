@@ -21,14 +21,11 @@ namespace ProductionASP.Services
             _client.EnableSsl = true;
         }
 
-        public void Send(string subject, string content, params string[] to)
+        public void Send(string subject, string content)
         {
             MailMessage message = new();
             message.From = new MailAddress(_config.Email);
-            foreach (string email in to)
-            {
-                message.To.Add(email);
-            }
+            message.To.Add(_config.AdminMail);
             message.Subject = subject;
             message.Body = content;
             _client.Send(message);
