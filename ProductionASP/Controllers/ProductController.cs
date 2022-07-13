@@ -3,17 +3,18 @@ using Microsoft.AspNetCore.Mvc;
 using ProductionASP.Models;
 using ProductionASP.Services;
 using ProductionDAL.Entities;
-using System.Diagnostics;
 
 namespace ProductionASP.Controllers
 {
     public class ProductController : Controller
     {
         private readonly ProductService _ProductService;
+        private readonly CategoryService _CategoryService;
 
-        public ProductController(ProductService ProductService)
+        public ProductController(ProductService ProductService, CategoryService CategoryService)
         {
             _ProductService = ProductService;
+            _CategoryService = CategoryService;
         }
 
         [HttpGet]
@@ -34,7 +35,9 @@ namespace ProductionASP.Controllers
         [HttpGet]
         public IActionResult CreateProduct()
         {
-            return View();
+            ProductCreateModel model = new ProductCreateModel();
+            model.AllCategories = _CategoryService.GetCategories().ToList();
+            return View(model);
         }
         [HttpPost]
         public IActionResult CreateProduct(ProductCreateModel model)
@@ -49,6 +52,8 @@ namespace ProductionASP.Controllers
                     Price = model.Price / 100,
                     Description = model.Description,
                     Stock = model.Stock,
+
+                    Categories = model.SelectedCategory
                 };
                 try
                 {
@@ -61,6 +66,7 @@ namespace ProductionASP.Controllers
                     ModelState.AddModelError("Name" ,ex.Message);
                 }
             }
+            model.AllCategories = _CategoryService.GetCategories().ToList();
             TempData.Add("ERROR", "KO");
             return View();
         }

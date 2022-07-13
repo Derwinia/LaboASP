@@ -34,7 +34,7 @@ namespace ProductionASP.Services
         {
             p.Reference = p.Name.Substring(0,4);
             IEnumerable<Product> sameName_prod = GetProducts()
-                    .Where(p => p.Reference.Substring(0, 4) == p.Name.Substring(0, 4));
+                    .Where(pnew => pnew.Reference.Substring(0, 4) == p.Name.Substring(0, 4));
             string temp = "000" + (sameName_prod.Count()+1);
             p.Reference += temp.Substring(temp.Length-4, 4);
             p.CreationDate = DateTime.Now;

@@ -1,11 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProductionDAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ProductionDAL.Configs
 {
@@ -18,6 +14,5 @@ namespace ProductionDAL.Configs
             builder.HasCheckConstraint("CK_NAME_MIN", "len(NAME) >= 4");
             builder.Property(p => p.Description).HasMaxLength(1000);
         }
-        
     }
 }

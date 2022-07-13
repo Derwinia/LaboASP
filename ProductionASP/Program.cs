@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ProductContext>(
     o => o.UseSqlServer(builder.Configuration.GetConnectionString("CNX")));
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<MailService>();
 builder.Services.AddScoped<SmtpClient>();
 builder.Services.AddSingleton(builder.Configuration.GetSection("SMTP").Get<MailConfig>());
