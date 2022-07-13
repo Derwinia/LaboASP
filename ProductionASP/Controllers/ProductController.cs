@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GestionTournoi.ASP.Exceptions;
+using Microsoft.AspNetCore.Mvc;
 using ProductionASP.Models;
 using ProductionASP.Services;
 using ProductionDAL.Entities;
@@ -23,6 +24,7 @@ namespace ProductionASP.Controllers
             IEnumerable<ProductIndexModel> model = Products
                 .Select(t => new ProductIndexModel
                 {
+                    Id = t.Id,
                     Reference = t.Reference,
                     Name = t.Name,
                     Price = t.Price,
@@ -44,11 +46,10 @@ namespace ProductionASP.Controllers
                 Product p = new Product
                 {
                     Name = model.Name,
-                    Price = model.Price,
+                    Price = model.Price / 100,
                     Description = model.Description,
                     Stock = model.Stock,
                 };
-
                 try
                 {
                     _ProductService.CreateProduct(p);
@@ -60,8 +61,35 @@ namespace ProductionASP.Controllers
                     ModelState.AddModelError("Name" ,ex.Message);
                 }
             }
-            TempData.Add("ERROR", "Verifiez vos données");
+            TempData.Add("ERROR", "KO");
             return View();
+        }
+
+        public IActionResult ConfirmationDelete([FromRoute] int id)
+        {
+            // Afficher une page de confirmation
+            return View(id);
+        }
+
+        public IActionResult DeleteEntry([FromRoute] int id)
+        {
+            Product? p = _ProductService.GetById(id);
+            if (p is null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                _ProductService.Delete(p);
+                TempData["SUCCESS"] = "Bravo";
+                return RedirectToAction("Index");
+            }
+            catch (ProductException ex)
+            {
+                // afficher un message d'erreur
+                TempData["ERROR"] = ex.Message;
+                return RedirectToAction("Index");
+            }
         }
     }
 }

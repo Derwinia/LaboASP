@@ -12,3 +12,17 @@ C:\Users\Student\Documents\Cours Pratique\CSharp\Avancer\Production\Production\P
 C:\Users\Student\Documents\Cours Pratique\CSharp\Avancer\Production\Production\ProductionDAL\obj\Debug\net6.0\ProductionDAL.pdb
 C:\Users\Student\Documents\Cours Pratique\CSharp\Avancer\Production\Production\ProductionDAL\obj\Debug\net6.0\ProductionDAL.genruntimeconfig.cache
 C:\Users\Student\Documents\Cours Pratique\CSharp\Avancer\Production\Production\ProductionDAL\obj\Debug\net6.0\ref\ProductionDAL.dll
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\bin\Debug\net6.0\ProductionDAL.deps.json
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\bin\Debug\net6.0\ProductionDAL.runtimeconfig.json
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\bin\Debug\net6.0\ProductionDAL.dll
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\bin\Debug\net6.0\ProductionDAL.pdb
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.csproj.AssemblyReference.cache
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.AssemblyInfoInputs.cache
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.AssemblyInfo.cs
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.csproj.CoreCompileInputs.cache
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.dll
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\refint\ProductionDAL.dll
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.pdb
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ProductionDAL.genruntimeconfig.cache
+F:\formation\CSharp\Avancer\LaboASP\ProductionDAL\obj\Debug\net6.0\ref\ProductionDAL.dll

@@ -8,33 +8,37 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProductionASP
 build_property.RootNamespace = ProductionASP
-build_property.ProjectDir = C:\Users\Student\Documents\Cours Pratique\CSharp\Avancer\Production\Production\ProductionASP\
+build_property.ProjectDir = F:\formation\CSharp\Avancer\LaboASP\ProductionASP\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Student\Documents\Cours Pratique\CSharp\Avancer\Production\Production\ProductionASP
+build_property.MSBuildProjectDirectory = F:\formation\CSharp\Avancer\LaboASP\ProductionASP
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Student/Documents/Cours Pratique/CSharp/Avancer/Production/Production/ProductionASP/Views/Product/CreateProduct.cshtml]
+[F:/formation/CSharp/Avancer/LaboASP/ProductionASP/Views/Product/ConfirmationDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDb25maXJtYXRpb25EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/formation/CSharp/Avancer/LaboASP/ProductionASP/Views/Product/CreateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Student/Documents/Cours Pratique/CSharp/Avancer/Production/Production/ProductionASP/Views/Product/Index.cshtml]
+[F:/formation/CSharp/Avancer/LaboASP/ProductionASP/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Student/Documents/Cours Pratique/CSharp/Avancer/Production/Production/ProductionASP/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/formation/CSharp/Avancer/LaboASP/ProductionASP/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Student/Documents/Cours Pratique/CSharp/Avancer/Production/Production/ProductionASP/Views/_ViewImports.cshtml]
+[F:/formation/CSharp/Avancer/LaboASP/ProductionASP/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Student/Documents/Cours Pratique/CSharp/Avancer/Production/Production/ProductionASP/Views/_ViewStart.cshtml]
+[F:/formation/CSharp/Avancer/LaboASP/ProductionASP/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Student/Documents/Cours Pratique/CSharp/Avancer/Production/Production/ProductionASP/Views/Shared/_Layout.cshtml]
+[F:/formation/CSharp/Avancer/LaboASP/ProductionASP/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nhepe0ohiz

@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "ConfirmationDelete";
+}
+
+<h1>DeleteProduct</h1>
+
+<h4>Etes-vous sur de vouloir supprimer cet article ?</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <button><a asp-controller="Product" asp-action="DeleteEntry" asp-route-id="@Model">Confirmer</a></button>
+        <button><a asp-controller="Product" asp-action="Index">Annuler</a></button>
+    </div>
+</div>

@@ -9488,28 +9488,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\denis\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\Documents\\Cours Pratique\\CSharp\\Avancer\\Production\\Production\\ProductionASP\\ProductionASP.csproj",
+      "projectUniqueName": "F:\\formation\\CSharp\\Avancer\\LaboASP\\ProductionASP\\ProductionASP.csproj",
       "projectName": "ProductionASP",
-      "projectPath": "C:\\Users\\Student\\Documents\\Cours Pratique\\CSharp\\Avancer\\Production\\Production\\ProductionASP\\ProductionASP.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\Documents\\Cours Pratique\\CSharp\\Avancer\\Production\\Production\\ProductionASP\\obj\\",
+      "projectPath": "F:\\formation\\CSharp\\Avancer\\LaboASP\\ProductionASP\\ProductionASP.csproj",
+      "packagesPath": "C:\\Users\\denis\\.nuget\\packages\\",
+      "outputPath": "F:\\formation\\CSharp\\Avancer\\LaboASP\\ProductionASP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\denis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -9522,8 +9519,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Student\\Documents\\Cours Pratique\\CSharp\\Avancer\\Production\\Production\\ProductionDAL\\ProductionDAL.csproj": {
-              "projectPath": "C:\\Users\\Student\\Documents\\Cours Pratique\\CSharp\\Avancer\\Production\\Production\\ProductionDAL\\ProductionDAL.csproj"
+            "F:\\formation\\CSharp\\Avancer\\LaboASP\\ProductionDAL\\ProductionDAL.csproj": {
+              "projectPath": "F:\\formation\\CSharp\\Avancer\\LaboASP\\ProductionDAL\\ProductionDAL.csproj"
             }
           }
         }
@@ -9579,7 +9576,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
