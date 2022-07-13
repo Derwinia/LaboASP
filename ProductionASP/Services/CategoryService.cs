@@ -15,5 +15,9 @@ namespace ProductionASP.Services
         {
             return _dc.Categories;
         }
+        public Category? GetById(int Id)
+        {
+            return _dc.Categories.Find(Id);
+        }
     }
 }

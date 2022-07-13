@@ -14,6 +14,7 @@ namespace ProductionDAL.Entities
         public DateTime CreationDate { get; set; }
         public DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
-        public ICollection<Category>? Categories { get; set; }
+        public Category? Category { get; set; }
+        public string? Picture { get; set; }
     }
 }

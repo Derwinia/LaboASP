@@ -21,7 +21,6 @@ namespace ProductionASP.Controllers
         public IActionResult Index()
         {
             IEnumerable<Product> Products = _ProductService.GetLastProduct();
-            //mapping transformer un object en au autre objet
             IEnumerable<ProductIndexModel> model = Products
                 .Select(t => new ProductIndexModel
                 {
@@ -29,6 +28,7 @@ namespace ProductionASP.Controllers
                     Reference = t.Reference,
                     Name = t.Name,
                     Price = t.Price,
+                    Picture = t.Picture
                 });
             return View(model);
         }
@@ -42,18 +42,15 @@ namespace ProductionASP.Controllers
         [HttpPost]
         public IActionResult CreateProduct(ProductCreateModel model)
         {
-            // verifier la validité du formulaire
-            // mapper le model en tournament
             if (ModelState.IsValid)
             {
                 Product p = new Product
                 {
                     Name = model.Name,
-                    Price = model.Price / 100,
+                    Price = model.Price/100,
                     Description = model.Description,
                     Stock = model.Stock,
-
-                    Categories = model.SelectedCategory
+                    Category = _CategoryService.GetById ( model.SelectedCategory )
                 };
                 try
                 {
@@ -76,7 +73,6 @@ namespace ProductionASP.Controllers
             // Afficher une page de confirmation
             return View(id);
         }
-
         public IActionResult DeleteEntry([FromRoute] int id)
         {
             Product? p = _ProductService.GetById(id);
@@ -96,6 +92,49 @@ namespace ProductionASP.Controllers
                 TempData["ERROR"] = ex.Message;
                 return RedirectToAction("Index");
             }
+        }
+        [HttpGet]
+        public IActionResult Modify([FromRoute] int id)
+        {
+            ProductModifyModel model = new ProductModifyModel();
+            Product? p = _ProductService.GetById(id);
+
+            model.AllCategories = _CategoryService.GetCategories().ToList();
+            model.Name = p.Name;
+            model.Price = p.Price;
+            model.Description = p.Description;
+            model.Stock = p.Stock;
+            model.StockModify = 0;
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult Modify(ProductModifyModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Product p = new Product
+                {
+                    Id = model.Id,
+                    Name = model.Name,
+                    Price = model.Price / 100,
+                    Description = model.Description,
+                    Stock = model.Stock,
+                    Category = _CategoryService.GetById(model.SelectedCategory)
+                };
+                try
+                {
+                    _ProductService.ModifyProduct(p,model.StockModify);
+                    TempData.Add("SUCCESS", "Enregistrement OK");
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("Name", ex.Message);
+                }
+            }
+            model.AllCategories = _CategoryService.GetCategories().ToList();
+            TempData.Add("ERROR", "KO");
+            return View();
         }
     }
 }

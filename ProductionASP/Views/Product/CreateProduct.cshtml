@@ -18,8 +18,8 @@
 				<span asp-validation-for="Name" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<label asp-for="@Model.Price" class="control-label"></label>
-				<input asp-for="@Model.Price" type="number" class="form-control" step="0.01"/>
+				<label asp-for="Price" class="control-label"></label>
+				<input asp-for="Price" type="number" class="form-control" step="0.1"/>
 				<span asp-validation-for="Price" class="text-danger"></span>
 			</div>
 			<div class="form-group">
@@ -32,24 +32,14 @@
 				<input asp-for="Stock" class="form-control" />
 				<span asp-validation-for="Stock" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<div class="input-field col s12">
-					<select multiple class="MathSelect">
-					  <option value="" disabled selected>Choose any category</option>
-						@foreach (var item in Model.AllCategories)
-						{
-							<option value="@item.Id">@item.Name</option>
-						}
-					</select>
-					<label>Materialize Multiple Select</label>
-				</div>
-			@*	<label asp-for="SelectedCategory" class="control-label">Category:</label>
-				<select asp-for="SelectedCategory" class="form-select MathSelect">
+			<div class="input-field col s12">
+				<select class="MathSelect" name="SelectedCategory" asp-for="SelectedCategory">
+					<option value="" disabled selected>Choose a category</option>
 					@foreach (var item in Model.AllCategories)
 					{
-							<option value="@item.Name">@item.Name</option>
+						<option value="@item.Id">@item.Name</option>
 					}
-				</select>*@
+				</select>
 			</div>
 			<div class="form-group">
 				<input type="submit" value="Create" class="btn btn-primary" />

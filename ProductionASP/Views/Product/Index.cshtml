@@ -9,6 +9,7 @@
 <p>
     <a asp-action="CreateProduct">Create New</a>
 </p>
+<img class="zoom" src="\Images\6e1iuo.jpg" />
 <table class="table">
     <thead>
         <tr>
@@ -20,9 +21,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
             </th>
             <th></th>
         </tr>
@@ -40,10 +38,13 @@
                 @Html.DisplayFor(modelItem => p.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => p.Category)
+                <img class="zoom" src="\Images\@p.Picture"/>
             </td>
             <td>
-                <a asp-action="ConfirmationDelete" asp-route-id="@p.Id">X</a>
+                <button><a asp-action="ConfirmationDelete" asp-route-id="@p.Id">Supprimer</a></button>
+            </td>
+            <td>
+                <button><a asp-action="Modify" asp-route-id="@p.Id">Modifier</a></button>
             </td>
         </tr>
 }
